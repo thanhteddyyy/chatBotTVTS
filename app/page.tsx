@@ -28,7 +28,7 @@ export default function LandingPage() {
       id: 2,
       name: "Trần Duy Nhân",
       role: "Backend Developer",
-      avatar: "",
+      avatar: "/team/duynhan.jpg",
       info: [
         "Server Infrastructure",
         "Database Management",
@@ -39,7 +39,7 @@ export default function LandingPage() {
       id: 3,
       name: "Đào Huy Phong",
       role: "Frontend Developer 2",
-      avatar: "",
+      avatar: "/team/huyphong.jpg",
       info: [
         "API Integration",
         "State Management",
@@ -101,8 +101,8 @@ export default function LandingPage() {
             <div className="space-y-4 text-gray-300 leading-relaxed text-base md:text-lg">
               <p>
                 <strong className="text-white">ChatBot NPT</strong> là trợ lý tư
-                vấn tuyển sinh trực tuyến cá nhân hóa được phát triển bởi nhóm sinh viên
-                Trường Đại học Bách khoa – ĐHQG-HCM.
+                vấn tuyển sinh trực tuyến cá nhân hóa được phát triển bởi nhóm sinh viên thuộc khoa
+                Khoa học và Kỹ thuật Máy tính của Trường Đại học Bách khoa – ĐHQG-HCM.
               </p>
               <p>
                 Trong bối cảnh thông tin tuyển sinh ngày càng phức tạp, thí sinh
@@ -122,8 +122,7 @@ export default function LandingPage() {
               </p>
               <p>
                 Được xây dựng trên nền tảng AI hiện đại với <strong>Google Gemini</strong>, ChatBot
-                có khả năng hiểu ngữ cảnh và trả lời tự nhiên như một người tư vấn
-                thực thụ.
+                có khả năng hiểu ngữ cảnh và trả lời tự nhiên như một tư vấn viên thực thụ.
               </p>
             </div>
           </div>
@@ -231,7 +230,7 @@ export default function LandingPage() {
       {/* ===== FOOTER ===== */}
       <footer className="text-center py-8 border-t border-white/5">
         <p className="text-gray-500 text-xs">
-          © 2025 ChatBot NPT — Trường Đại học Bách khoa, ĐHQG-HCM
+          © 2026 ChatBot NPT — Trường Đại học Bách khoa - ĐHQG-HCM
         </p>
       </footer>
     </div>

@@ -321,8 +321,15 @@ def resolve_school_code(raw_name):
     """Chuyển tên trường bất kỳ thành ma_truong chuẩn."""
     if not raw_name:
         return None
-    
+
+    # Bảo vệ: nếu vô tình truyền list thay vì string → lấy phần tử đầu tiên
+    if isinstance(raw_name, list):
+        raw_name = raw_name[0] if raw_name else None
+    if not raw_name:
+        return None
+
     name_lower = raw_name.lower().strip()
+
     
     # Kiểm tra trực tiếp là ma_truong
     if name_lower.upper() in SCHOOL_NAMES:
@@ -512,7 +519,11 @@ def query_firestore_by_entities(entities, uid=None):
     truong_raw = entities.get("truong")
     nganh_raw = entities.get("nganh")
     ma_phuong_thuc = entities.get("ma_phuong_thuc")  # Đã chuẩn hóa: PT1/PT2/PT3
-    
+
+    # Gemini trả về truong luôn là list → lấy phần tử đầu tiên nếu cần
+    if isinstance(truong_raw, list):
+        truong_raw = truong_raw[0] if truong_raw else None
+
     school_code = resolve_school_code(truong_raw)
     
     if not school_code:
